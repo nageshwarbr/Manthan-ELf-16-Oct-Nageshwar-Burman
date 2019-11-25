@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <style>
+    body{
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    </style>
+</head>
+<body>
+    <form id="loginForm" name="loginform" action="" >
+
+        <div>
+            <input name="username" type="text" placeholder="Enter username">
+        </div>
+        <p id="pele" style="display: none;font-size: 15px;color: red;">Please enter username</p>
+        <div>
+                <input name="password" type="password" placeholder="Enter password">
+            </div>
+            <p id="pelepass" style="display: none;font-size: 15px;color: red;">Please enter password</p>
+           
+            <button  onclick="return validateForm()" type="button" name="login">Login!!</button>
+    </form>
+    <script src="/Keywords/Forms/form.js"></script>
+</body>
+</html>

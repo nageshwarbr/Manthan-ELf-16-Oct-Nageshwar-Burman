@@ -1,0 +1,42 @@
+form{
+    border: 1px solid black;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    margin-left: 653px;
+    margin-top: 200px;
+    border-radius: 25px;
+    background-image: url("/images/morning-4573991__340.jpg");
+    background-size: cover;
+    color:rgb(135, 222, 142);
+    font-size: 20px;
+    font-family: cursive;
+    box-shadow: 0 0 50px rgb(22, 95, 13);
+}
+body{
+    background-image: url("/images/coffee-4591159__340.jpg");
+    background-size: cover;
+}
+input[type="text"],input[type="password"]{
+    width: 200px;
+    height: 20px;
+    border: 1px solid rgb(226, 19, 19);
+    border-radius: 50px;
+    outline: none;
+    text-align: center;
+
+}
+input[type="submit"]{
+    width: 200px;
+    height: 40px;
+    margin-top: 10px;
+    border: 1px solid rgb(15, 214, 48);
+    border-radius: 50px;
+    outline: none;
+    
+}
+input[type="submit"]:hover{
+   background-color: cornflowerblue;
+   color: rgb(226, 43, 58);
+   cursor: pointer;
+}
