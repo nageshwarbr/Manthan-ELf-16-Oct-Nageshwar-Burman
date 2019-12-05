@@ -44,6 +44,14 @@
 	<%
 		if (ls != null) {
 	%>
+<style>
+      table, th, td {
+      padding: 10px;
+      border: 1px solid black; 
+      border-collapse: collapse;
+      text-align: center;
+      }
+    </style>
 	<table>
 		<tr>
 			<th>FileName</th>
