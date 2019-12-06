@@ -22,30 +22,23 @@ public class SearchImpl extends HttpServlet {
 		String keyword = req.getParameter("keyword").toLowerCase();
 		File folder = new File("D:\\files");
 		File[] listOfFiles = folder.listFiles();
-		PdfReader pdf=new PdfReader();
-       
-		for (File file : listOfFiles) {
-			System.out.println(file);
-			ResumeBean bean=null;
-			 bean=pdf.pdfReader(file, keyword);
-			 System.out.println("..........................."+bean);
-			 if(bean!=null) {
-			
-			
-				System.out.println("Adding");
-				ls.add(bean);
-				System.out.println(ls);
-			
-		}
-		}
-			if (ls.isEmpty()) {
-				req.setAttribute("msg", "No records found");
-			} else {
-				req.setAttribute("ls", ls);
-			}
-			req.getRequestDispatcher("/Search").forward(req, resp);
+		ResumeReader pdf=new ResumeReader();
 
-		
+		for (File file : listOfFiles) {
+			ResumeBean bean=null;
+			bean=pdf.resumeReader(file, keyword);
+			if(bean!=null) {
+				ls.add(bean);
+			}
+		}
+		if (ls.isEmpty()) {
+			req.setAttribute("msg", "No records found");
+		} else {
+			req.setAttribute("ls", ls);
+		}
+		req.getRequestDispatcher("/Search").forward(req, resp);
+
+
 
 	}
 }

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Download  extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
-	 
+
 	protected void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
@@ -23,14 +23,10 @@ public class Download  extends HttpServlet{
 		response.setContentType("APPLICATION/OCTET-STREAM");
 		response.setHeader("Content-Disposition", "attachment; filename=\""
 				+ filename + "\"");
- 
-		// use inline if you want to view the content in browser, helpful for
-		// pdf file
-		// response.setHeader("Content-Disposition","inline; filename=\"" +
-		// filename + "\"");
+
 		FileInputStream fileInputStream = new FileInputStream(filepath
 				+ filename);
- 
+
 		int i;
 		while ((i = fileInputStream.read()) != -1) {
 			out.write(i);
@@ -38,5 +34,5 @@ public class Download  extends HttpServlet{
 		fileInputStream.close();
 		out.close();
 	}
-	
+
 }
