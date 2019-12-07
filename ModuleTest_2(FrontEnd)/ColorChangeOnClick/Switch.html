@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+     <link rel="stylesheet" typr="text/css" href="/ColorChangeOnClick/style.css"><!--linking external css -->
+</head>
+<body>
+    <button>Switch color</button>
+    <!-- Start of javascript -->
+    <script type="text/javascript"> 
+    // Array to store six colors
+    var color=["#222f3e","#e74c3c","#3498db","#2ecc71","#95a5a6","#f1c40f"];
+    var i=0;
+    document.querySelector("button").addEventListener("click",function(){
+        // Iterating through the array
+     i=1<color.length ? ++i:0;
+     document.querySelector("body").style.background=color[i];
+    })
+    </script>
+</body>
+</html>
