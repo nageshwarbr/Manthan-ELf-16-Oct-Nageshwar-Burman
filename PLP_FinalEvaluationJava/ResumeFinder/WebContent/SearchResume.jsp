@@ -66,7 +66,8 @@
 			<td><%=rs.getFileName()%></td>&nbsp;
 			<td><%=rs.getName()%></td>&nbsp;&nbsp;&nbsp;&nbsp;
 			<td><%=rs.getEmail()%></td>&nbsp;
-			<td> <a href="./downloadsevlet?filename=<%= rs.getFileName()%>"><img src="" alt="no img"></a></td>
+			<td> <a href="./downloadsevlet?filename=<%= rs.getFileName()%>"><img src="" alt="Download here!!
+"></a></td>
 
 			
 			<%
